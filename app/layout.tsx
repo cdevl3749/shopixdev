@@ -12,8 +12,8 @@ const font = Poppins(
   );
 
 export const metadata: Metadata = {
-  title: "ShopiX online store",
-  description: "Create, grow, and scale your business",
+  title: "ShopiX Plateformes web sur mesure",
+  description: "Créez, développez et faites évoluer votre entreprise",
   icons: {
     icon: '/favicon.ico',
   },
