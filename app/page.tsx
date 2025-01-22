@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import Navbar from "@/components/navbar";
 import SliderOne from "@/components/ui/slider";
 import { Spotlight } from "@/components/ui/spotlight";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 import WebsiteDesign from "./website-design";
@@ -14,16 +14,20 @@ import Brands from "./brands";
 import Services from "./services";
 import FAQS from "./faq";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
+// import Head from "next/head";
 
 export default function Home() {
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const toggleDropdown = () => {
+  // const [isDropdownVisible, setDropdownVisible] = useState(false);
+ /*  const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
   const closeDropdown = () => {
     setDropdownVisible(false);
-  };
-
+  }; */
+ 
+{/* <Head>
+    <link rel="icon" href="/app/favicon.ico" />
+</Head> */}
   const websiteDesignRef = useRef<HTMLDivElement>(null);
   const graphicDesignRef = useRef<HTMLDivElement>(null);
   const shopifyStoresRef = useRef<HTMLDivElement>(null);

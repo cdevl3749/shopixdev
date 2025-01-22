@@ -65,8 +65,8 @@ const Brands = () => {
             font.className
           )}
         >
-          &quot;Nous nous sommes débarrassés de près d’une douzaine d’outils différents grâce à ce que
-          ShopiX fait pour nous.&quot;
+          Nous nous sommes débarrassés de près d’une douzaine d’outils différents grâce à ce que
+          ShopiX fait pour nous.
         </div>
 
         <div className="items-center flex justify-center flex-col text-white">

@@ -14,6 +14,9 @@ const font = Poppins(
 export const metadata: Metadata = {
   title: "ShopiX online store",
   description: "Create, grow, and scale your business",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -22,12 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
+      
       <body 
       
       suppressHydrationWarning={true}
       className={font.className}>
-        { <Analytics /> }
+         <Analytics /> 
         {children}
         
         </body>

@@ -24,7 +24,7 @@ const FAQS = () => {
     <AccordionItem value="item-1">
       <AccordionTrigger>Qui sommes-nous ?</AccordionTrigger>
       <AccordionContent>
-        ShopiX est une agence de marketing à part entière spécialisée dans l'image de marque, la conception de sites Web et le marketing numérique.
+        ShopiX est une agence de marketing à part entière spécialisée dans l&apos;image de marque, la conception de sites Web et le marketing numérique.
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -40,7 +40,7 @@ const FAQS = () => {
 
         </AccordionTrigger>
       <AccordionContent>
-        Une maintenance régulière est essentielle pour qu'un site Web stabilise sa flexibilité et sa fiabilité. Une maintenance appropriée contribuera à garantir la sécurité de votre site Web, à attirer de nouveaux visiteurs, à augmenter le trafic et bien plus encore.
+        Une maintenance régulière est essentielle pour qu&apos;un site Web stabilise sa flexibilité et sa fiabilité. Une maintenance appropriée contribuera à garantir la sécurité de votre site Web, à attirer de nouveaux visiteurs, à augmenter le trafic et bien plus encore.
       </AccordionContent>
     </AccordionItem>
 

@@ -6,7 +6,7 @@ interface DropDownMenuProps {
   scrollToServices: () => void; // Add scrollToServices function to props
 }
 
-const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose, scrollToServices }) => {
+const DropDownMenu: React.FC<DropDownMenuProps> = ({ }) => {
   return (
     <motion.div
       className="

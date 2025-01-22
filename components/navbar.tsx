@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { AlignJustify, X } from "lucide-react";
 
 import Image from "next/image";
@@ -46,6 +46,9 @@ const Navbar = ({
               className="w-10 h-10 md:w-14 md:h-14"
             />
           </Link>
+          <div className="text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
+          ShopiX
+        </div>
         </div>
         
         <div
@@ -67,7 +70,7 @@ const Navbar = ({
             ShopiX Stores
           </div>
           <div onClick={scrollToBrands} className="hover:text-gray-50">
-            Marques
+            Branding
           </div>
 
           <Link href="/pricing" className="hover:text-gray-50">

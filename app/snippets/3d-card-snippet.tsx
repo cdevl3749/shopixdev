@@ -12,7 +12,7 @@ export function ThreeDCardExample() {
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          Faire flotter des objets dans l'air
+          Faire flotter des objets dans l&apos;air
         </CardItem>
         <CardItem
           as="p"
@@ -43,7 +43,7 @@ export function ThreeDCardExample() {
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
-            S'inscrire
+            S&apos;inscrire
           </CardItem>
         </div>
       </CardBody>

@@ -23,11 +23,11 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
+  // FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  // FormMessage,
 } from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
@@ -35,7 +35,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 
 import { Textarea } from "@/components/ui/textarea";
-import { PiCheckLight, PiSmiley } from "react-icons/pi";
+import { PiSmiley } from "react-icons/pi";
 import Navbar from "@/components/navbar";
 
 const FormSchema = z.object({
@@ -45,37 +45,21 @@ const FormSchema = z.object({
   job_title: z.string(),
   company_name: z.string(),
   help: z.enum([
-    "Évaluer ShopiX pour mon entreprise",
-    "Apprendre encore plus",
     "Obtenez un devis",
     "Autre",
   ]),
   services: z.enum([
-    "Mobile App Development",
-    "Social Media Marketing",
-    "UI/UX Design",
-    "Branding",
-    "Website Development",
+    "Applications web et mobiles",
+    "Gestion des réseaux sociaux",
+    "Conception graphique",
+    "Stratégie digitale",
+    "E-commerce",
   ]),
   info: z.string(),
+  terms: z.boolean(),
 });
 
-type FormValues = {
-  first_name: string;
-  last_name: string;
-  email: string;
-  job_title: string;
-  company_name: string;
-  help: "Évaluer Bird pour mon entreprise" | "Apprendre encore plus" | "Obtenez un devis" | "Autre";
-  services:
-    | "Mobile App Develoment"
-    | "Social Media Marketing"
-    | "UI/UX Design"
-    | "Branding"
-    | "Website Development";
-  info: string;
-  terms: boolean;
-};
+type FormValues = z.infer<typeof FormSchema>;
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -90,9 +74,10 @@ export default function ContactForm() {
       email: "",
       job_title: "",
       company_name: "",
-      help: "Apprendre encore plus",
-      services: "Mobile App Develoment",
+      help: "Obtenez un devis",
+      services: "Applications web et mobiles",
       info: "",
+      terms: false,
     },
   });
 
@@ -106,14 +91,14 @@ export default function ContactForm() {
       });
 
       if (!res.ok) {
-        throw new Error("Quelque chose s'est mal passé");
+        throw new Error("Quelques chose s'est mal passé");
       }
 
       setSubmitted(true);
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
-        description: "Quelque chose s'est mal passé",
+        description: "Quelques chose s'est mal passé",
       });
     } finally {
       setLoading(false);
@@ -147,13 +132,13 @@ export default function ContactForm() {
           <div className="bg-[#f6f5f4] md:w-4/5 space-y-6 p-4 rounded-2xl my-4 hidden md:flex md:flex-col">
             <div className="flex gap-4 border-b ">
               <div className=" font-normal pb-4 ">
-                Une agence flexible pour l'ensemble de votre entreprise pour partager des connaissances, expédier des projets et collaborer.
+                Une agence flexible pour l&apos;ensemble de votre entreprise pour partager des connaissances, expédier des projets et collaborer.
               </div>
             </div>
 
             <div className="flex gap-4 border-b ">
               <div className=" font-normal pb-4 ">
-                Fonctionnalités d'entreprise pour gérer en toute sécurité l'accès et la sécurité des utilisateurs.
+                Fonctionnalités d&apos;entreprise pour gérer en toute sécurité l&apos;accès et la sécurité des utilisateurs.
               </div>
             </div>
 
@@ -173,11 +158,7 @@ export default function ContactForm() {
             space-y-4
             h-full
             border rounded-3xl p-10
-            md:w-1/3
-            
-            
-                     
-                        "
+            md:w-1/3"
             >
               <div className="md:flex items-center gap-6 ">
                 <FormField
@@ -186,7 +167,7 @@ export default function ContactForm() {
                   render={({ field }) => (
                     <FormItem className="items-center justify-center  w-full">
                       <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                        Prénom *
+                        First name *
                       </FormLabel>
                       <FormControl>
                         <Input {...field} />
@@ -232,7 +213,7 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem className="items-center justify-center  w-full">
                     <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                      Nom de l'entreprise?
+                      Nom de l&apos;entreprise?
                     </FormLabel>
                     <FormControl>
                       <Input {...field} />
@@ -260,14 +241,14 @@ export default function ContactForm() {
                       </FormControl>
                       <SelectContent>
                         <div className="flex gap-4">
-                          <SelectItem value="Mobile App Develoment">
-                          Mobile App Develoment
+                          <SelectItem value="Applications web et mobiles ">
+                          Applications web et mobiles 
                           </SelectItem>
                         </div>
-                        <SelectItem value="Social Media Marketing">Social Media Marketing</SelectItem>
-                        <SelectItem value="51-200">51-200</SelectItem>
-                        <SelectItem value="501-1000">501-1000</SelectItem>
-                        <SelectItem value="1000+">1000+</SelectItem>
+                        <SelectItem value="Gestion des réseaux sociaux">Gestion des réseaux sociaux</SelectItem>
+                        <SelectItem value="Conception graphique">Conception graphique</SelectItem>
+                        <SelectItem value="Stratégie digitale">Stratégie digitale</SelectItem>
+                        <SelectItem value="E-commerce">E-commerce</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormItem>
@@ -296,14 +277,11 @@ export default function ContactForm() {
                       </FormControl>
                       <SelectContent>
                         <div className="flex gap-4">
-                          <SelectItem value="Evaluate ShopiX for my company">
-                            Évaluer ShopiX pour mon entreprise
+                          <SelectItem value="Obtenez un devis">
+                            Obtenez un devis
                           </SelectItem>
                         </div>
-                        <SelectItem value="Learn More">Apprendre encore plus</SelectItem>
-                        <SelectItem value="Get a Quote">Obtenez un devis</SelectItem>
-
-                        <SelectItem value="Other">Autre</SelectItem>
+                        <SelectItem value="Autre">Autre</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormItem>
@@ -338,8 +316,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="text-xs font-light  md:w-3/4 mb-1 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                  J'accepte les conditions d'utilisation de ShopiX&apos; envoi de communications marketing liées
-                  à ShopiX
+                  J&apos;accepte les conditions d&apos;utilisation de ShopiX envoi de communications marketing liées à ShopiX
                 </div>
               </div>
 

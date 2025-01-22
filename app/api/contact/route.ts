@@ -13,8 +13,8 @@ export async function POST(req: Request) {
       email,
      
       company_name,
+      services,
       help,
-      company_size,
       info,
     } = await req.json();
 
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
                     <p>Work Email: ${email}</p>
                 
                     <p>Company Name: ${company_name}</p>
-                    <p>Company Size: ${company_size}</p>
+                    <p>Services: ${services}</p>
                     <p>Help: ${help}</p>
                 
                     <p>Info: ${info}</p>
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
       await transporter.sendMail(mailOptions);
 
       return NextResponse.json("email has been sent");
-    } catch (error) {
+    } catch {
       return NextResponse.json("email has not been sent");
     }
   } else {
