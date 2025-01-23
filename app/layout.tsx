@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+// import CookieConsentBanner from "@/components/CookieConsentBanner";
 
 const font = Poppins(
   { subsets: ["latin"],
@@ -33,7 +34,7 @@ export default function RootLayout({
       className={font.className}>
          <Analytics /> 
         {children}
-        
+        {/* <CookieConsentBanner /> */}
         </body>
     </html>
   );
