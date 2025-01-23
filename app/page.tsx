@@ -14,6 +14,7 @@ import Brands from "./brands";
 import Services from "./services";
 import FAQS from "./faq";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 // import Head from "next/head";
 
 export default function Home() {
@@ -88,6 +89,7 @@ export default function Home() {
         <div className="w-full pt-20">
           <SliderOne />
         </div>
+        <CookieConsentBanner />
         <div ref={websiteDesignRef}>
           <WebsiteDesign />
         </div>
