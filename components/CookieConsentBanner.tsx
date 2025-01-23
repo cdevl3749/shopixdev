@@ -165,7 +165,7 @@ const CookieConsentBanner = () => {
                         htmlFor="analytics"
                         className="text-blue-500 hover:underline cursor-pointer"
                         >
-                            Cookies d&aposanalyse
+                            Cookies Analytiques
                         </label>
                     </div>
                     <div className="flex items-center mb-2">
