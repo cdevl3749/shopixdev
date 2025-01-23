@@ -3,7 +3,7 @@
 import React from "react";
 import Cookies from "js-cookie";
 
-const CookieConsentBanner: React.FC<{}> = () => {
+const CookieConsentBanner = () => {
     const [cookieConsent, setCookieConsent] = React.useState<string | null>(null);
     const [showModal, setShowModal] = React.useState<boolean>(false);
     const [cookieTypes, setCookieTypes] = React.useState<{
@@ -165,7 +165,7 @@ const CookieConsentBanner: React.FC<{}> = () => {
                         htmlFor="analytics"
                         className="text-blue-500 hover:underline cursor-pointer"
                         >
-                            Cookies d'analyse
+                            Cookies d&aposanalyse
                         </label>
                     </div>
                     <div className="flex items-center mb-2">
