@@ -6,6 +6,7 @@ import SliderOne from "@/components/ui/slider";
 import { Spotlight } from "@/components/ui/spotlight";
 // import Image from "next/image";
 import Link from "next/link";
+// import Footer from "@/components/Footer";
 
 import WebsiteDesign from "./website-design";
 import GraphicDesign from "./graphic-design";
@@ -102,11 +103,12 @@ export default function Home() {
         <div ref={brandsRef}>
           <Brands />
         </div>
-        <div id ='services'>
+        <div ref={servicesRef}>
         <Services />
         </div>
         <InfiniteMovingCardsDemo />
         <FAQS />
+        {/* <Footer /> */}
       </div>
     </div>
   );

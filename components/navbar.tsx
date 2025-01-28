@@ -73,6 +73,10 @@ const Navbar = ({
             Branding
           </div>
 
+          <div onClick={scrollToServices} className="hover:text-gray-50">
+            Services
+          </div>
+
           <Link href="/pricing" className="hover:text-gray-50">
             Tarifs
           </Link>
