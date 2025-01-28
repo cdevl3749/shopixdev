@@ -25,6 +25,10 @@ const FAQS = () => {
       <AccordionTrigger>Qui sommes-nous ?</AccordionTrigger>
       <AccordionContent>
         ShopiX est une agence de marketing à part entière spécialisée dans l&apos;image de marque, la conception de sites Web et le marketing numérique.
+        Nous sommes spécialisés dans la création de solutions technologiques innovantes, 
+        entièrement personnalisées, au service de clients issus de divers secteurs d&apos;activité. 
+        Notre approche de travail nous permet de concevoir des solutions sur mesure, efficaces, performantes, 
+        et offrant un retour sur investissement rapide et à haute valeur ajoutée.
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
