@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 // import CookieConsentBanner from "@/components/CookieConsentBanner";
+import Footer from "@/components/Footer";
 
 const font = Poppins(
   { subsets: ["latin"],
@@ -13,7 +14,7 @@ const font = Poppins(
   );
 
 export const metadata: Metadata = {
-  title: "ShopiX Plateformes web sur mesure",
+  title: "ShopiX Optimisez votre activité",
   description: "Créez, développez et faites évoluer votre entreprise",
   icons: {
     icon: '/favicon.ico',
@@ -35,6 +36,7 @@ export default function RootLayout({
          <Analytics /> 
         {children}
         {/* <CookieConsentBanner /> */}
+        <Footer />
         </body>
     </html>
   );
