@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ThreeDCardExample } from "../snippets/3d-card-snippet";
 import { EvervaultCardSnippet } from "../snippets/evervault-card-snippet";
-import Navbar from "@/components/navbar";
+// import Navbar from "@/components/navbar";
 
 const GraphicDesign = () => {
     return ( 
