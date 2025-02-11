@@ -1,11 +1,17 @@
-
 import { Analytics } from '@vercel/analytics/react';
 
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Footer from '@/components/Footer';
+// import Navbar from '@/components/navbar';
+// import ScrollToTopButton from '@/components/ScrollToTopButton';
+
+
+
+
 // import CookieConsentBanner from "@/components/CookieConsentBanner";
-import Footer from "@/components/Footer";
+
 
 const font = Poppins(
   { subsets: ["latin"],
@@ -20,7 +26,6 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,8 +40,9 @@ export default function RootLayout({
       className={font.className}>
          <Analytics /> 
         {children}
+        {/* <ScrollToTopButton /> */}
         {/* <CookieConsentBanner /> */}
-        <Footer />
+        <Footer /> 
         </body>
     </html>
   );
