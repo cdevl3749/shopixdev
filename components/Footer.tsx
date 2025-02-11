@@ -12,27 +12,28 @@ const Footer = () => {
           <Image src="/logo/logo_footer.png" alt="Logo" width={50} height={50} className="mb-4" />
           </Link>
           <p>ShopiX - Optimisez votre activité.</p>
+
         </div>
         <div>
           <h3 className="font-bold mb-3">Conception</h3>
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/website-design">
                 <span className="cursor-pointer hover:underline">Website Design</span>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/graphic-design">
                 <span className="cursor-pointer hover:underline">Graphic Design</span>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services">
                 <span className="cursor-pointer hover:underline">Conception Web UX</span>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services">
                 <span className="cursor-pointer hover:underline">Responsive</span>
               </Link>
             </li>
@@ -42,22 +43,22 @@ const Footer = () => {
           <h3 className="font-bold mb-3">Développement</h3>
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/services">
                 <span className="cursor-pointer hover:underline">Développement web sur mesure</span>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services">
                 <span className="cursor-pointer hover:underline">E-commerce Store</span>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services">
                 <span className="cursor-pointer hover:underline">Test de logiciel</span>
               </Link>
             </li>
              <li>
-              <Link href="/">
+              <Link href="/services">
                 <span className="cursor-pointer hover:underline">Refonte web sur mesure</span>
               </Link>
             </li>
@@ -72,7 +73,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/confidentialite">
                 <span className="cursor-pointer hover:underline">Politique de confidentialité</span>
               </Link>
             </li>

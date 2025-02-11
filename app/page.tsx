@@ -7,15 +7,22 @@ import { Spotlight } from "@/components/ui/spotlight";
 // import Image from "next/image";
 import Link from "next/link";
 // import Footer from "@/components/Footer";
+// import Head from "next/head";
 
-import WebsiteDesign from "./website-design";
-import GraphicDesign from "./graphic-design";
+// import WebsiteDesign from "./website-design"
+// import GraphicDesign from "./graphic-design";
 import ShopifyStores from "./shopify-stores";
 import Brands from "./brands";
-import Services from "./services";
+import Services from "./services/page";
 import FAQS from "./faq";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+import WebsiteDesign from "./website-design/page";
+import GraphicDesign from "./graphic-design/page";
+// import Footer from "@/components/Footer";
+
+
 // import Head from "next/head";
 
 export default function Home() {
@@ -29,7 +36,7 @@ export default function Home() {
  
 {/* <Head>
     <link rel="icon" href="/app/favicon.ico" />
-</Head> */}
+</Head>  */}
   const websiteDesignRef = useRef<HTMLDivElement>(null);
   const graphicDesignRef = useRef<HTMLDivElement>(null);
   const shopifyStoresRef = useRef<HTMLDivElement>(null);
@@ -70,7 +77,7 @@ export default function Home() {
         scrollToBrands={scrollToBrands}
         scrollToServices={scrollToServices}
       />
-
+      
       <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         <div className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
@@ -91,6 +98,7 @@ export default function Home() {
           <SliderOne />
         </div>
         <CookieConsentBanner />
+        <ScrollToTopButton />
         <div ref={websiteDesignRef}>
           <WebsiteDesign />
         </div>
@@ -108,8 +116,11 @@ export default function Home() {
         </div>
         <InfiniteMovingCardsDemo />
         <FAQS />
-        {/* <Footer /> */}
+    {/*   {  <Footer 
+          scrollToWebsiteDesign={scrollToWebsiteDesign}
+        /> } */}
       </div>
     </div>
   );
 }
+

@@ -71,6 +71,7 @@ const Brands = () => {
 
         <div className="items-center flex justify-center flex-col text-white">
           <Image
+            priority
             src="/images/logo.svg"
             alt="logo"
             width={1000}

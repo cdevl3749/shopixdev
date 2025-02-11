@@ -4,6 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+import Link from "next/link"
 
 
 
@@ -34,7 +35,7 @@ const FAQS = () => {
     <AccordionItem value="item-2">
       <AccordionTrigger>Comment commencer ?</AccordionTrigger>
       <AccordionContent>
-        Vous pouvez commencer par nous contacter. Nous vous répondrons dans les 24 heures, via notre formulaire de contact.
+        Vous pouvez commencer par <Link href="/contact" className="text-emerald-600 hover:underline">nous contacter</Link>. Nous vous répondrons dans les 24 heures, via notre formulaire de contact.
       </AccordionContent>
     </AccordionItem>
 
@@ -53,8 +54,7 @@ const FAQS = () => {
     Tarif ?
       </AccordionTrigger>
       <AccordionContent>
-        Nous proposons des solutions sur mesure pour votre entreprise. Découvrez nos Plans tarifaires.
-        
+        Nous proposons des solutions sur mesure pour votre entreprise. <Link href="/pricing" className="text-emerald-600 hover:underline">Découvrez nos Plans tarifaires</Link>.
       </AccordionContent>
     </AccordionItem>
   
